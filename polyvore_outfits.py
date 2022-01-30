@@ -150,6 +150,8 @@ class TripletImageLoader(torch.utils.data.Dataset):
         for index, im in enumerate(imnames):
             im2index[im] = index
 
+        self.im2index = im2index
+        self.id2im = id2im
         self.data = outfit_data
         self.imnames = imnames
         self.im2type = im2type
